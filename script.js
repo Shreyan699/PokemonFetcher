@@ -62,7 +62,42 @@ async function UpdateInformation(){
         speed.innerHTML = data.stats[5].stat.name+" : "+data.stats[5].base_stat
         image.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`
 
+        // Display typings with specific colors
+        typings.innerHTML = ''; // Clear previous typings
+        data.types.forEach(typeInfo => {
+            const type = typeInfo.type.name;
+            const typeElement = document.createElement('span');
+            typeElement.innerHTML = type;
+            typeElement.style.color = getTypeColor(type);
+            typings.appendChild(typeElement);
+        });
+
         // Remove update animation class after animation ends
         elements.forEach(el => el.classList.remove('update-animation'));
     }, 500); // 0.5s delay
+}
+
+// Function to get color based on Pokémon type
+function getTypeColor(type) {
+    const typeColors = {
+        normal: '#A8A77A',
+        fire: '#EE8130',
+        water: '#6390F0',
+        electric: '#F7D02C',
+        grass: '#7AC74C',
+        ice: '#96D9D6',
+        fighting: '#C22E28',
+        poison: '#A33EA1',
+        ground: '#E2BF65',
+        flying: '#A98FF3',
+        psychic: '#F95587',
+        bug: '#A6B91A',
+        rock: '#B6A136',
+        ghost: '#735797',
+        dragon: '#6F35FC',
+        dark: '#705746',
+        steel: '#B7B7CE',
+        fairy: '#D685AD'
+    };
+    return typeColors[type] || '#000000'; // Default to black if type not found
 }
