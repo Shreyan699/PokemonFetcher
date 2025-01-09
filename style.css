@@ -1,4 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+/* Color Theme Swatches in Hex */
+.Swimwear-Commercial-project-1-hex { color: #F20530; }
+.Swimwear-Commercial-project-2-hex { color: #F2D43D; }
+.Swimwear-Commercial-project-3-hex { color: #F29F05; }
+.Swimwear-Commercial-project-4-hex { color: #F27405; }
+.Swimwear-Commercial-project-5-hex { color: #F24535; }
+
+/* Color Theme Swatches in RGBA */
+.Swimwear-Commercial-project-1-rgba { color: rgba(242, 4, 48, 1); }
+.Swimwear-Commercial-project-2-rgba { color: rgba(242, 211, 60, 1); }
+.Swimwear-Commercial-project-3-rgba { color: rgba(242, 159, 4, 1); }
+.Swimwear-Commercial-project-4-rgba { color: rgba(242, 115, 4, 1); }
+.Swimwear-Commercial-project-5-rgba { color: rgba(242, 69, 53, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Swimwear-Commercial-project-1-hsla { color: hsla(348, 96, 48, 1); }
+.Swimwear-Commercial-project-2-hsla { color: hsla(50, 87, 59, 1); }
+.Swimwear-Commercial-project-3-hsla { color: hsla(39, 96, 48, 1); }
+.Swimwear-Commercial-project-4-hsla { color: hsla(28, 96, 48, 1); }
+.Swimwear-Commercial-project-5-hsla { color: hsla(5, 88, 57, 1); }
 
 *{
     margin: 0;
@@ -10,7 +30,7 @@ body{
     font-family: 'Montserrat',sans-serif;
     width: 100%;
     height: 100vh;
-    background-color: #8D77AB;
+    background: linear-gradient(135deg, #F2D43D, #F27405); /* Gradient background */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,9 +44,22 @@ body{
     justify-content: center;
     height: 70vh;
     flex-direction: column;
-    background-color: #F9F6E6;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
     border-radius: 30px;
-    border: 3px solid #BAD8B6;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.information {
+    width: 80%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Additional glassmorphism effect */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .pokemons{
@@ -36,13 +69,16 @@ body{
     text-align: center;
     font-size: 20px;
     border-radius: 4px;
-    background-color: transparent;
+    background: rgba(255, 255, 255, 0.2); /* Glassmorphism effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
     -webkit-appearance: none;
     margin-bottom: 10px;
+    color: #F20530; /* Updated text color */
 }
 
 .pokemons option {
-    color: #8D77AB; /* Change this to your desired color */
+    color: #F20530; /* Updated text color */
     background-color: #E1EACD;
     -webkit-appearance: none;
 }
@@ -55,43 +91,47 @@ body{
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #FFFFFF; /* Updated text color for better contrast */
 }
 
 .typings {
     font-size: 18px;
     margin-bottom: 10px;
+    color: #FFFFFF; /* Updated text color for better contrast */
 }
 
 .stats {
     font-size: 16px;
     margin-bottom: 5px;
+    color: #FFFFFF; /* Updated text color for better contrast */
 }
 
 #image {
     width: 150px;
     height: 150px;
     margin-top: 10px;
+    border: none; /* Removed border */
 }
 
 ::-webkit-scrollbar {
     width: 20px;
 }
   
-  /* Track */
-  ::-webkit-scrollbar-track {
+/* Track */
+::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
-  }
+}
   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: #888;
-  }
+}
   
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
+}
 
 .update-animation {
     animation: fadeIn 0.5s ease-in-out;
