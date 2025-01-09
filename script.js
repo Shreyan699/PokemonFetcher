@@ -22,7 +22,7 @@ async function FetchAllPokemon(){
         }
     }
 
-    UpdateInformation()
+    document.getElementById("pokemons").addEventListener("change", UpdateInformation);
 }
 
 FetchAllPokemon();
