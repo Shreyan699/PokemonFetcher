@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Fetcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <select name="pokemons" onchange="UpdateInformation()" id="pokemons" class="pokemons">
+
+        </select>
+        <div class="information">
+            <p id="name"></p>
+            <p id="typings"></p>
+            <div id="stats">
+                <p id="hp"></p>
+                <p id="attack"></p>
+                <p id="defense"></p>
+                <p id="sp-attack"></p>
+                <p id="sp-defense"></p>
+                <p id="speed"></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
