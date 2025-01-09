@@ -45,6 +45,8 @@ async function UpdateInformation(){
     const spDefense = document.getElementById("sp-defense")
     const speed = document.getElementById("speed")
     const image = document.getElementById("image")
+    // get pokedex number
+    number = data.id
 
 
     name.innerHTML = data.name
@@ -54,5 +56,6 @@ async function UpdateInformation(){
     spAttack.innerHTML = data.stats[3].stat.name+" : "+data.stats[3].base_stat
     spDefense.innerHTML = data.stats[4].stat.name+" : "+data.stats[4].base_stat
     speed.innerHTML = data.stats[5].stat.name+" : "+data.stats[5].base_stat
-    image.src = data.sprites.front_default
+
+    image.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png` // Ensure the image source is set correctly
 }
