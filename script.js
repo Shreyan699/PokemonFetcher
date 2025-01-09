@@ -29,7 +29,7 @@ FetchAllPokemon();
 
 async function UpdateInformation(){
     const url = "https://pokeapi.co/api/v2/pokemon/"
-
+    
     let value = document.getElementById("pokemons").value
 
     let response = await fetch(url+`${value}`)

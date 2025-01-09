@@ -60,6 +60,8 @@ body{
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
 .pokemons{
@@ -68,17 +70,18 @@ body{
     font-family: 'Montserrat';
     text-align: center;
     font-size: 20px;
-    border-radius: 4px;
+    border-radius: 20px;
+    margin-top: 20px;
     background: rgba(255, 255, 255, 0.2); /* Glassmorphism effect */
     border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     -webkit-appearance: none;
     margin-bottom: 10px;
-    color: #F20530; /* Updated text color */
+    color: #2c0e13; /* Updated text color */
 }
 
 .pokemons option {
-    color: #F20530; /* Updated text color */
+    color: #3d131b; /* Updated text color */
     background-color: #E1EACD;
     -webkit-appearance: none;
 }
@@ -91,7 +94,8 @@ body{
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #FFFFFF; /* Updated text color for better contrast */
+    color: #382424; /* Updated text color for better contrast */
+    
 }
 
 .typings {
@@ -100,10 +104,12 @@ body{
     color: #FFFFFF; /* Updated text color for better contrast */
 }
 
-.stats {
+#stats {
     font-size: 16px;
     margin-bottom: 5px;
-    color: #FFFFFF; /* Updated text color for better contrast */
+    color: #181818; /* Updated text color for better contrast */
+    background: rgba(255, 255, 255, 0.2); /* Glassmorphism effect */
+    border-radius: 20px;
 }
 
 #image {
@@ -164,4 +170,8 @@ body{
         width: 90%;
         font-size: 14px;
     }
+}
+
+#typings{
+    text-shadow: 1px 1px 1px 1px #555;
 }
