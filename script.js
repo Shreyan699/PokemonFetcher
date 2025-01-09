@@ -48,14 +48,21 @@ async function UpdateInformation(){
     // get pokedex number
     number = data.id
 
+    // Apply update animation
+    const elements = [name, typings, hp, attack, defense, spAttack, spDefense, speed, image];
+    elements.forEach(el => el.classList.add('update-animation'));
 
-    name.innerHTML = data.name
-    hp.innerHTML = data.stats[0].stat.name+" : "+data.stats[0].base_stat
-    attack.innerHTML = data.stats[1].stat.name+" : "+data.stats[1].base_stat
-    defense.innerHTML = data.stats[2].stat.name+" : "+data.stats[2].base_stat
-    spAttack.innerHTML = data.stats[3].stat.name+" : "+data.stats[3].base_stat
-    spDefense.innerHTML = data.stats[4].stat.name+" : "+data.stats[4].base_stat
-    speed.innerHTML = data.stats[5].stat.name+" : "+data.stats[5].base_stat
+    setTimeout(() => {
+        name.innerHTML = data.name
+        hp.innerHTML = data.stats[0].stat.name+" : "+data.stats[0].base_stat
+        attack.innerHTML = data.stats[1].stat.name+" : "+data.stats[1].base_stat
+        defense.innerHTML = data.stats[2].stat.name+" : "+data.stats[2].base_stat
+        spAttack.innerHTML = data.stats[3].stat.name+" : "+data.stats[3].base_stat
+        spDefense.innerHTML = data.stats[4].stat.name+" : "+data.stats[4].base_stat
+        speed.innerHTML = data.stats[5].stat.name+" : "+data.stats[5].base_stat
+        image.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`
 
-    image.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png` // Ensure the image source is set correctly
+        // Remove update animation class after animation ends
+        elements.forEach(el => el.classList.remove('update-animation'));
+    }, 500); // 0.5s delay
 }

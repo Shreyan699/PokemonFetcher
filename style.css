@@ -70,3 +70,36 @@ body{
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+
+.update-animation {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        height: auto;
+    }
+
+    .pokemons {
+        width: 80%;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+
+    .pokemons {
+        width: 90%;
+        font-size: 14px;
+    }
+}
