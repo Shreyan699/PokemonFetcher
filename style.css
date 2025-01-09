@@ -22,7 +22,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    height: 70vh;
     flex-direction: column;
     background-color: #F9F6E6;
     border-radius: 30px;
@@ -49,6 +49,28 @@ body{
 
 .pokemons option:focus{
     background-color: white;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.typings {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.stats {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+#image {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
 }
 
 ::-webkit-scrollbar {

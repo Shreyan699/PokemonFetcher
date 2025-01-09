@@ -54,16 +54,31 @@ async function UpdateInformation(){
 
     setTimeout(() => {
         name.innerHTML = data.name
+        name.classList.add('name'); // Add class for styling
+
         hp.innerHTML = data.stats[0].stat.name+" : "+data.stats[0].base_stat
+        hp.classList.add('stats'); // Add class for styling
+
         attack.innerHTML = data.stats[1].stat.name+" : "+data.stats[1].base_stat
+        attack.classList.add('stats'); // Add class for styling
+
         defense.innerHTML = data.stats[2].stat.name+" : "+data.stats[2].base_stat
+        defense.classList.add('stats'); // Add class for styling
+
         spAttack.innerHTML = data.stats[3].stat.name+" : "+data.stats[3].base_stat
+        spAttack.classList.add('stats'); // Add class for styling
+
         spDefense.innerHTML = data.stats[4].stat.name+" : "+data.stats[4].base_stat
+        spDefense.classList.add('stats'); // Add class for styling
+
         speed.innerHTML = data.stats[5].stat.name+" : "+data.stats[5].base_stat
+        speed.classList.add('stats'); // Add class for styling
+
         image.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${number}.png`
 
         // Display typings with specific colors
         typings.innerHTML = ''; // Clear previous typings
+        typings.classList.add('typings'); // Add class for styling
         data.types.forEach(typeInfo => {
             const type = typeInfo.type.name;
             const typeElement = document.createElement('span');
