@@ -8,11 +8,11 @@
 </head>
 <body>
     <div class="container">
-        <select name="pokemons" onchange="UpdateInformation()"  id="pokemons" class="pokemons">
+        <select name="pokemons"onchange="UpdateInformation()"  id="pokemons" class="pokemons">
             <option selected>Select</option>
         </select>
         <div class="information">
-            <img src="" id="image"/>
+            <img src="" alt="Hello" style="display: none;" id="image"/>
             <p id="name"></p>
             <p id="typings"></p>
             <div id="stats">
@@ -23,6 +23,9 @@
                 <p id="sp-defense"></p>
                 <p id="speed"></p>
             </div>
+            <audio style="display: none;" controls id="cries">
+            <source  src="" type="audio/ogg">
+            </audio>
         </div>
     </div>
 </body>
